@@ -1,5 +1,6 @@
 import * as dotenv from 'dotenv';
 import Configuration from "../interfaces/config.interface";
+
 dotenv.config()
 
 const ENV = process.env.NODE_ENV || 'development'
@@ -14,6 +15,11 @@ const CONFIG: Configuration = {
             audience: process.env.AUTH0_AUDIENCE,
             issuer: process.env.AUTH0_ISSUER
         },
+        cloudinary: {
+            cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+            api_key: process.env.CLOUDINARY_API_KEY,
+            api_secret: process.env.CLOUDINARY_API_SECRET
+        }
 
     },
 
